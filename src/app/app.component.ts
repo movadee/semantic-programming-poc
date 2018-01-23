@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { DynamicComponentLoaderService } from './shared/form-components/dynamic-component-loader.service';
+import { 
+  Component, 
+  Inject,
+  ViewContainerRef
+} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +11,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  constructor(@Inject(DynamicComponentLoaderService) service, 
+              @Inject(ViewContainerRef) viewContainerRef) {
+    service.setRootViewContainerRef(viewContainerRef)
+    service.addDynamicComponent()
+  }
 }
