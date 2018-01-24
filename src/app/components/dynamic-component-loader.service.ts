@@ -20,10 +20,13 @@ export class DynamicComponentLoaderService {
   }
 
   public addDynamicComponent() {
-    const factory = this.factoryResolver.resolveComponentFactory(FormInputAddressComponent);
-    const component = factory.create(this.rootViewContainer.parentInjector);
+    // array of components that needs to be dynamically generated
+    let data = [FormInputAddressComponent, FormInputAddressComponent, FormInputAddressComponent, FormInputAddressComponent, FormInputAddressComponent];
 
-    this.rootViewContainer.insert(component.hostView);
+    for (let entry of data) {
+      let factory = this.factoryResolver.resolveComponentFactory(entry);
+      this.rootViewContainer.insert(factory.create(this.rootViewContainer.parentInjector).hostView);
+    }
   }
 
 }
