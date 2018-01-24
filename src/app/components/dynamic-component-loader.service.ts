@@ -6,7 +6,7 @@ import {
   Inject,
   ReflectiveInjector
 } from '@angular/core';
-import { FormInputAddressComponent } from './form-input-address/form-input-address.component';
+import { FormInputAddressComponent } from './form-components/form-input-address/form-input-address.component';
 
 @Injectable()
 export class DynamicComponentLoaderService {
@@ -22,7 +22,7 @@ export class DynamicComponentLoaderService {
   public addDynamicComponent() {
     const factory = this.factoryResolver.resolveComponentFactory(FormInputAddressComponent);
     const component = factory.create(this.rootViewContainer.parentInjector);
-    
+
     this.rootViewContainer.insert(component.hostView);
   }
 

@@ -1,9 +1,5 @@
-import { DynamicComponentLoaderService } from './shared/form-components/dynamic-component-loader.service';
-import { 
-  Component, 
-  Inject,
-  ViewContainerRef
-} from '@angular/core';
+import { DynamicComponentLoaderService } from './components/dynamic-component-loader.service';
+import { Component, Inject, ViewContainerRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -11,9 +7,9 @@ import {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(@Inject(DynamicComponentLoaderService) service, 
-              @Inject(ViewContainerRef) viewContainerRef) {
-    service.setRootViewContainerRef(viewContainerRef)
-    service.addDynamicComponent()
+
+  constructor(@Inject(DynamicComponentLoaderService) service, @Inject(ViewContainerRef) viewContainerRef) {
+    service.setRootViewContainerRef(viewContainerRef);
+    service.addDynamicComponent();
   }
 }
