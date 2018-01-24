@@ -7,10 +7,10 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 
 // components
 import { AppComponent } from './app.component';
+import { FormInputAddressComponent } from './components/form-components/form-input-address/form-input-address.component';
 
 // services
-import { DynamicComponentLoaderService } from './shared/form-components/dynamic-component-loader.service';
-import { FormInputAddressComponent } from './shared/form-components/form-input-address/form-input-address.component';
+import { DynamicComponentLoaderService } from './components/dynamic-component-loader.service';
 
 
 @NgModule({
