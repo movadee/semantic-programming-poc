@@ -1,0 +1,22 @@
+{
+  "fields": [
+    {
+      "id": "firstName",
+      "type": "form-full-name-input",
+      "cardType": "formFullNameInput",
+      "value": {
+        "label": "First Name",
+        "placeholder": "Jane"
+      }
+    },
+    {
+      "id": "lastName",
+      "type": "form-full-name-input",
+      "cardType": "formFullNameInput",
+      "value": {
+        "label": "Last Name",
+        "placeholder": "Doe"
+      }
+    }
+  ]
+}

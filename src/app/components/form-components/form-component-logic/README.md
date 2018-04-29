@@ -1,4 +1,7 @@
-(II) Dynamically add components to the DOM 
+(I) Lazy Loading Pages
+
+
+(II) Dynamically Add Components to the DOM 
   Inspired by Dave Rivera [https://medium.com/front-end-hacking/dynamically-add-components-to-the-dom-with-angular-71b0cb535286]
   We will use ViewContainerRef, which represents a container where one or more views (components) can be attached. This object is basically a $(<selector>) for Angular (DOM manipulation). Injecting this object into a Component’s constructor will give us that Component’s container and, with it, we can append a sibling Component to that container.
 
@@ -9,3 +12,9 @@
   (II)::STEP_2 Create a service loader to create the component
   (II)::STEP_3 Main component will inject it’s container (ViewContainerRef ) to the service
   (II)::STEP_4 Inside of app.module.ts add the dynamic components as an entryComponents. The entryComponents will create a factory so that when the ComponentFactoryResolver is called we are able to create an instance of the component and add it to the DOM
+
+
+(III) Dynamically Generate Forms in the DOM
+
+
+(IV) Using Service to Auto-Generate Menu Items in the Header
