@@ -4,16 +4,17 @@ import { ReactiveFormsModule } from '@angular/forms'
 
 // material design
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule, MatCardModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatCardModule, MatInputModule} from '@angular/material';
 
 // components
 import { AppComponent } from './app.component';
 
 // dynamically loaded components
-import { FormFullNameComponent } from './components/form-components/form-full-name-input.component';
+import { FormTextInputComponent } from './components/form-components/form-text-input.component';
 import { FormComponent } from './components/form-components/form-component-logic/form.component';
 import { FormItemComponent } from './components/form-components/form-component-logic/form-item.component';
 import { FormTemplateBaseComponent } from './components/form-components/form-component-logic/form-template-base.component';
+import { FormCheckboxComponent } from './components/form-components/form-checkbox.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { FormTemplateBaseComponent } from './components/form-components/form-com
     FormComponent,
     FormItemComponent,
     FormTemplateBaseComponent,
-    FormFullNameComponent
+    FormTextInputComponent,
+    FormCheckboxComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { FormTemplateBaseComponent } from './components/form-components/form-com
     BrowserAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
-    MatCardModule
+    MatCardModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],
@@ -42,6 +45,6 @@ import { FormTemplateBaseComponent } from './components/form-components/form-com
   // (II)::STEP_4  Entry components are creating a factory so that when
   // the ComponentFactoryResolver is called we are able to create an instance
   // of the component and add it to the DOM.
-  entryComponents: [FormFullNameComponent]
+  entryComponents: [FormTextInputComponent, FormCheckboxComponent ]
 })
 export class AppModule { }
