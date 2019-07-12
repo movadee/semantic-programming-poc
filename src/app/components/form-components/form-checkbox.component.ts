@@ -5,7 +5,7 @@ import { FormTemplateBaseComponent } from './form-component-logic/form-template-
 
 @Component({
   selector: 'app-form-checkbox',
-  template: `    
+  template: `
   <div class="form-group" [formGroup]="group">
     <mat-checkbox class="form-control" [formControlName]="data.id">{{data.value.label}}</mat-checkbox>
   </div>

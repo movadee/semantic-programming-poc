@@ -6,7 +6,7 @@ import {ErrorStateMatcher} from '@angular/material/core';
 
 @Component({
   selector: 'app-form-text-input',
-  template: `    
+  template: `
   <div class="form-group" [formGroup]="group">
     <mat-form-field>
       <input matInput [placeholder]="data.value.label" class="form-control" [formControlName]="data.id" [errorStateMatcher]="matcher">
